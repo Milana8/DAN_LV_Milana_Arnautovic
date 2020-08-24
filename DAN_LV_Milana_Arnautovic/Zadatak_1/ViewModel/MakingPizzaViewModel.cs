@@ -170,7 +170,10 @@ namespace Zadatak_1.ViewModel
         }
         public int total;
         public string Size;
-
+        /// <summary>
+        /// Method for calculating the total price
+        /// </summary>
+        /// <param name="add"></param>
         public void AddToTotal(int add)
         {
             total += add;
@@ -194,7 +197,9 @@ namespace Zadatak_1.ViewModel
                 Size = "Large";
             }
         }
-
+        /// <summary>
+        /// The method of adding the price of a pizza side dish to the total price
+        /// </summary>
         public void DishCheck()
         {
             if (Salami == true)
