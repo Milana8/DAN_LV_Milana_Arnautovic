@@ -20,14 +20,14 @@
             <CheckBox x:Name="hum" Content="Hum-60rsd" HorizontalAlignment="Left" Margin="15,147,0,0" VerticalAlignment="Top" Width="150" IsChecked="{Binding Hum, UpdateSourceTrigger=PropertyChanged}"/>
             <CheckBox x:Name="sausage" Content="Sausage-70rsd" HorizontalAlignment="Left" Margin="15,168,0,0" VerticalAlignment="Top"  Width="150" IsChecked="{Binding Sausage, UpdateSourceTrigger=PropertyChanged}"/>
             <CheckBox x:Name="oregano" Content="Oregano-10rsd" HorizontalAlignment="Left" Margin="209,147,0,0" VerticalAlignment="Top" Width="150" IsChecked="{Binding Oregano, UpdateSourceTrigger=PropertyChanged}"/>
-            <CheckBox x:Name="cheese" Content="Cheese-rsd" HorizontalAlignment="Left" Margin="209,190,0,0" VerticalAlignment="Top" Width="150" IsChecked="{Binding Cheese, UpdateSourceTrigger=PropertyChanged}"/>
+            <CheckBox x:Name="cheese" Content="Cheese-50rsd" HorizontalAlignment="Left" Margin="209,190,0,0" VerticalAlignment="Top" Width="150" IsChecked="{Binding Cheese, UpdateSourceTrigger=PropertyChanged}"/>
             <CheckBox x:Name="sesame" Content="Sesame-20rsd" HorizontalAlignment="Left" Margin="209,170,0,0" VerticalAlignment="Top" Width="150" IsChecked="{Binding Sesame, UpdateSourceTrigger=PropertyChanged}"/>
             <CheckBox x:Name="salami" Content="Salami-50rsd" HorizontalAlignment="Left" Margin="209,210,0,-53" VerticalAlignment="Top" Width="122" Height="102" IsChecked="{Binding Salami, UpdateSourceTrigger=PropertyChanged}"/>
             <CheckBox x:Name="olives" Content="Olives-50rsd" HorizontalAlignment="Left" Margin="209,230,0,-58" VerticalAlignment="Top" Width="122" Height="102" IsChecked="{Binding Olives, UpdateSourceTrigger=PropertyChanged}"/>
             <CheckBox x:Name="chilli" Content="Chilli-20rsd" HorizontalAlignment="Left" Margin="15,230,0,-58" VerticalAlignment="Top" Width="122" Height="102" IsChecked="{Binding Chilli, UpdateSourceTrigger=PropertyChanged}"/>
         </Grid>
         <Button x:Name="Calculate"  Content="Calculate" Command="{Binding Calculate,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="512,440,0,0" VerticalAlignment="Top" Width="127" Height="36"  FontSize="20" FontFamily="Calibri" FontWeight="Bold"/>
-       
+        <Button x:Name="NewPizza"  Content="NewPizza" Command="{Binding NewPizza,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="512,500,0,0" VerticalAlignment="Top" Width="127" Height="36"  FontSize="20" FontFamily="Calibri" FontWeight="Bold"/>
         <Label Content="Dish:" HorizontalAlignment="Left" Margin="176,259,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
 
         <Separator HorizontalAlignment="Left" Height="9" Margin="176,259,0,0" VerticalAlignment="Top" Width="359"/>

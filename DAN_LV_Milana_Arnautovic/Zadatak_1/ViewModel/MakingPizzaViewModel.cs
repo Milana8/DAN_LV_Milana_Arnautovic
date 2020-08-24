@@ -10,7 +10,7 @@ using Zadatak_1.View;
 
 namespace Zadatak_1.ViewModel
 {
-    class MakingPizzaViewModel :ViewModelBase
+    class MakingPizzaViewModel : ViewModelBase
     {
         MakingPizzaView view;
 
@@ -171,9 +171,9 @@ namespace Zadatak_1.ViewModel
         public int total;
         public string Size;
 
-        public void AddToTotal(int addMore)
+        public void AddToTotal(int add)
         {
-            total += addMore;
+            total += add;
         }
 
         public void SizeCheck()
@@ -247,7 +247,7 @@ namespace Zadatak_1.ViewModel
                 AddToTotal(50);
 
             }
-            
+
         }
         private ICommand calculate;
         /// <summary>
@@ -272,13 +272,13 @@ namespace Zadatak_1.ViewModel
         {
             SizeCheck();
             DishCheck();
-            
-                      
-                MessageBox.Show(
-                                 "\nPizza Size: " + Size +
-                                 "\nPrice:" + total+ " Rsd");
-                
-            
+
+
+            MessageBox.Show(
+                             "\nPizza Size: " + Size +
+                             "\nPrice:" + total + " Rsd");
+
+
         }
         /// <summary>
         /// Can calculate
@@ -286,8 +286,79 @@ namespace Zadatak_1.ViewModel
         /// <returns></returns>
         private bool CanCalculateExecute()
         {
-            return true;
+            if (Size_Small == true && Size_Medium == true)
+            {
+                return false;
+            }
+            if (Size_Small == true && Size_Large == true)
+            {
+                return false;
+            }
+            if (Size_Medium == true && Size_Large == true)
+            {
+                return false;
+            }
+            if (Size_Small == false && Size_Large == false && Size_Medium == false)
+            {
+                return false;
+            }
+            if (Size_Small == true && Size_Large == true && Size_Medium == true)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        private ICommand newpizza;
+        /// <summary>
+        /// New Pizza command
+        /// </summary>
+        public ICommand NewPizza
+        {
+            get
+            {
+                if (newpizza == null)
+                {
+                    newpizza = new RelayCommand(param => NewPizzaExecute(), param => CanNewPizzaExecute());
+                }
+                return newpizza;
+            }
         }
 
+        /// <summary>
+        /// New Pizza execute
+        /// </summary>
+        private void NewPizzaExecute()
+        {
+            total = 0;
+            Size_Small = false;
+            Size_Medium = false;
+            Size_Large = false;
+            Salami = false;
+            Hum = false;
+            Sausage = false;
+            Ketchup = false;
+            Mayonnaise = false;
+            Chilli = false;
+            Olives = false;
+            Oregano = false;
+            Sesame = false;
+            Cheese = false;
+
+
+
+        }
+        /// <summary>
+        /// Can new pizza
+        /// </summary>
+        /// <returns></returns>
+        private bool CanNewPizzaExecute()
+        {
+            return true;
+        }
     }
+
 }
+
